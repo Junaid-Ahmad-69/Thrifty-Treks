@@ -7,7 +7,11 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
   css: ["~/assets/css/main.css"],
-  modules: ["@nuxt/eslint", "@nuxt/icon"],
+  modules: [
+    "@nuxt/eslint",
+    "@nuxt/icon",
+    "@nuxtjs/color-mode",
+  ],
   eslint: {
     config: {
       standalone: false,
@@ -17,5 +21,8 @@ export default defineNuxtConfig({
     plugins: [
       tailwindcss(),
     ],
+  },
+  colorMode: {
+    dataValue: "theme",
   },
 });
